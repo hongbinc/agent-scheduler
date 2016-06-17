@@ -15,9 +15,7 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
 
-
     <link rel="stylesheet" href="src/css/app.css">
-
 </head>
 <body>
 <my-app>Loading...</my-app>
@@ -26,6 +24,6 @@
     System.import('app').catch(function(err){ console.error(err);  });
 </script>
 <!--<script src="app/bundle.js"></script>-->
-<script async src="http://maps.googleapis.com/maps/api/js?libraries=places&callback=InitMapViewModel"></script>
+<script async src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </body>
 </html>
