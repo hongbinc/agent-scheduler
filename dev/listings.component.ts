@@ -5,8 +5,8 @@ import { GoogleMapsWrapper } from './google.maps.wrapper';
 
 
 @Component({
-    selector: 'my-listing',
-    templateUrl: "/dev/listings.component.html",
+	selector: 'my-listing',
+	templateUrl: "/dev/listings.component.html",
 })
 
 export class Listings {
@@ -23,19 +23,19 @@ export class Listings {
 		var self = this;
 		
 		this.mGoogleMapsWrapper.GoogleMapsAPI.then(tGoogleMaps => {
-            let vGeocoder = new tGoogleMaps.Geocoder();
-            vGeocoder.geocode({ address: obj.address },
-                (tResults, tStatus) => {
-                    if (tStatus === tGoogleMaps.GeocoderStatus.OK) {
-                        var location = tResults[0].geometry.location;
+			let vGeocoder = new tGoogleMaps.Geocoder();
+			vGeocoder.geocode({ address: obj.address },
+				(tResults, tStatus) => {
+					if (tStatus === tGoogleMaps.GeocoderStatus.OK) {
+						var location = tResults[0].geometry.location;
 						self.modelForMap.emit({
 							value: {
 								lat: location.lat(),
 								lng: location.lng()
 							}
 						});
-                    }
-                });
-        });
+					}
+				});
+		});
 	}
 }

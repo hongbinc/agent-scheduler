@@ -15,21 +15,21 @@ export class MapComponent {
 	
 	ngOnInit() {
 		this.mWrapper.GoogleMapsAPI.then(tGoogleMaps => {
-            let vDiv = document.getElementById("map-container");
-            let vLat = this.model.lat || 40.75;
-            let vLng = this.model.lng || -74;
-            this.Map = new tGoogleMaps.Map(vDiv, {
-                center: { lat: vLat, lng: vLng },
-                zoom: 14,
-                scrollwheel: false
-            });
-        });
+			let vDiv = document.getElementById("map-container");
+			let vLat = this.model.lat || 40.75;
+			let vLng = this.model.lng || -74;
+			this.Map = new tGoogleMaps.Map(vDiv, {
+				center: { lat: vLat, lng: vLng },
+				zoom: 14,
+				scrollwheel: false
+			});
+		});
 	}
 
-    ngOnChanges(tChanges: { [propname: string]: SimpleChange }) {
+	ngOnChanges(tChanges: { [propname: string]: SimpleChange }) {
 		this.mWrapper.GoogleMapsAPI.then(tGoogleMaps => {
 			this.addMarker(tGoogleMaps, this.model);
-        });
+		});
 	}
 
 	addMarker(tGoogleMaps, model) {
