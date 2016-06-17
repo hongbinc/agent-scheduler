@@ -17,10 +17,10 @@
 	<input type="text" #address class="form-control" placeholder="Address" />
 	</div>
 	<div class="form-group">
-	<button class="btn btn-primary" (click)="addListing(name, address)">Add Listing</button>
+	<button class="btn btn-primary" (newListing)='newListingAdded($event)' (click)="addListing(name, address)">Add Listing</button>
 	</div>
 </form>
 
-<my-listing [listings]='listings' (modelForMap)='changeMapValues($event)'></my-listing>
+<my-listing [listings]='listings'></my-listing>
 
-<my-map [model]='currentListing'></my-map>
+<my-map [model]='currentListing' [listings]='listings'></my-map>
