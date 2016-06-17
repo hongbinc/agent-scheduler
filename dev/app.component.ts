@@ -4,19 +4,7 @@ import {ListingModel} from './listing.model';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <div id="map"></div>
-        <h1>Agent Schedular11</h1>
-        
-        <input type="text" [readonly]="isNameEditable" [(ngModel)]="agentName" />
-        <button (click)="isNameEditable = !isNameEditable;">Edit</button>
-
-        <form class="form form-inline">
-        	<input type="text" #name class="form-control" placeholder="Name"/>
-        	<input type="text" #address class="form-control" placeholder="Address" />
-       		<button class="btn-primary" (click)="addListing(name.value, address.value)">Add Listing</button>
-       	</form>
-    `,
+    templateUrl: "/dev/app.component.html"
 })
 
 export class AppComponent {
