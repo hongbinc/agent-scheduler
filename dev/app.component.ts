@@ -4,14 +4,7 @@ import {ListingModel} from './ListingModel';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <div id="map"></div>
-        <h1>Agent Schedular11</h1>
-        <p>Hello World!!</p>
-        <form>
-       		<div type="text" placeholder="Agent Name"></div>
-       	</form>
-    `,
+    templateUrl: "/dev/app.component.html"
 })
 export class AppComponent {
 	@LocalStorage('agentName') 
