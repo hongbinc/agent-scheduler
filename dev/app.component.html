@@ -2,11 +2,25 @@
 
 <h1>Agent Schedular</h1>
 
-<input type="text" [readonly]="isNameEditable" [(ngModel)]="agentName" />
-<button (click)="isNameEditable = !isNameEditable;">Edit</button>
-
-<form class="form form-inline">
-	<input type="text" #name class="form-control" placeholder="Name"/>
-	<input type="text" #address class="form-control" placeholder="Address" />
-	<button class="btn-primary" (click)="addListing(name.value, address.value)">Add Listing</button>
+<form class="form-inline">
+	<div class="form-group">
+		<input class="form-control" type="text" [readonly]="isNameEditable" [(ngModel)]="agentName" />
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" (click)="isNameEditable = !isNameEditable;">{{!isNameEditable ? 'Save' : 'Edit'}}</button>
+	</div>
 </form>
+
+<form class="form-inline">
+	<div class="form-group">
+	<input type="text" #name class="form-control" placeholder="Name"/>
+	</div>
+	<div class="form-group">
+	<input type="text" #address class="form-control" placeholder="Address" />
+	</div>
+	<div class="form-group">
+	<button class="btn btn-primary" (click)="addListing(name, address)">Add Listing</button>
+	</div>
+</form>
+
+<my-listing [listings]='listings'></my-listing>
