@@ -8,12 +8,16 @@ import {ListingsService} from './listings.service';
 @Component({
     selector: 'my-app',
     directives: [Listings, MapComponent],
-    templateUrl: "/dev/app.component.html"
+    templateUrl: "/dev/app.component.html",
 })
 
 export class AppComponent {
 	isNameEditable = true;
 	listings = [];
+	currentListing = {
+		lat: 51.678418,
+		lng: 7.809007
+	};
 
 	constructor(private mListingsService: ListingsService) { 
 		this.listings = mListingsService.getAllListing();
@@ -30,5 +34,11 @@ export class AppComponent {
 
 	isEditable() {
 		return this.isNameEditable;
+	}
+
+	changeMapValues($event) {
+		console.log('Event.Value - ', $event.value)
+		this.currentListing = $event.value;
+		console.log('Current Location - ', this.currentListing);
 	}
 }

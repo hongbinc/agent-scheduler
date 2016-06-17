@@ -21,6 +21,6 @@
 	</div>
 </form>
 
-<my-listing [listings]='listings'></my-listing>
+<my-listing [listings]='listings' (modelForMap)='changeMapValues($event)'></my-listing>
 
-<my-map></my-map>
+<my-map [model]='currentListing' ></my-map>

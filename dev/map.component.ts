@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS } from 'angular2-google-maps/core';
 
 @Component({
@@ -10,10 +10,5 @@ import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS } from 'angular2-google-m
 
 export class MapComponent {
 	title: string = 'Map Component';
-	lat: number = 51.678418;
-	lng: number = 7.809007;
-
-	setLatLan(address: string) {
-		
-	}
+	@Input() model;
 }
