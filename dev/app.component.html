@@ -1,7 +1,5 @@
-﻿<div id="map"></div>
-
-<h1>Agent Schedular</h1>
-
+﻿<h2 class="text-center">Agent Helper</h2>
+<hr/>
 <form class="form-inline">
 	<div class="form-group">
 		<input class="form-control" type="text" [readonly]="isNameEditable" [(ngModel)]="agentName" />
@@ -24,3 +22,5 @@
 </form>
 
 <my-listing [listings]='listings'></my-listing>
+
+<my-map></my-map>

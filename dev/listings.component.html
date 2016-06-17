@@ -1,18 +1,18 @@
-<table class="table table-hover">
+<table class="table table-striped">
 	<thead>
-		<tr>
-			<th></th>
-			<th>Name</th>
-			<th>Address</th>
-			<th></th>
+		<tr class="info">
+			<th style="width: 5%"></th>
+			<th style="width: 30%">Name</th>
+			<th style="width: 60%">Address</th>
+			<th style="width: 5%"></th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr *ngFor="let v of listings">
-			<td (click)="removeListing(v)">&#x274c;</td>
+			<td class="text-left" (click)="removeListing(v)">&#x274c;</td>
 			<td>{{v.name}}</td>
 			<td>{{v.address}}</td>
-			<td><button class="btn btn-primary">Show</button></td>
+			<td class="text-right"><button class="btn btn-primary btn-xs">Show</button></td>
 		</tr>
 	</tbody>
 </table>

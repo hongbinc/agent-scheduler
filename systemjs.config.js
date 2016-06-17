@@ -5,7 +5,8 @@
         'app':                        'app', // 'dist',
         'rxjs':                       'node_modules/rxjs',
         '@angular':                   'node_modules/@angular',
-        // 'angular2-localstorage':      'node_modules/angular2-localstorage'
+        // 'angular2-localstorage':      'node_modules/angular2-localstorage',
+        'angular2-google-maps':       'node_modules/angular2-google-maps'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
@@ -24,7 +25,8 @@
         '@angular/platform-browser-dynamic',
         '@angular/router',
         '@angular/testing',
-        '@angular/upgrade'
+        '@angular/upgrade',
+        'angular2-google-maps/core'
     ];
 
     // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }

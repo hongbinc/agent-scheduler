@@ -2,11 +2,12 @@ import {Component} from '@angular/core';
 import {LocalStorage, SessionStorage} from "./WebStorage";
 import {ListingModel} from './listing.model';
 import {Listings} from './listings.component';
+import {MapComponent} from './map.component';
 import {ListingsService} from './listings.service';
 
 @Component({
     selector: 'my-app',
-    directives: [Listings],
+    directives: [Listings, MapComponent],
     templateUrl: "/dev/app.component.html"
 })
 
