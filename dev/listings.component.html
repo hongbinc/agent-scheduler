@@ -8,7 +8,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let v of listings" (click)="showListingInMap(v)">
+		<tr *ngFor="let v of listings">
 			<td class="text-left" (click)="removeListing(v)">&#x274c;</td>
 			<td>{{v.name}}</td>
 			<td>{{v.address}}</td>

@@ -37,8 +37,6 @@ export class AppComponent {
 	}
 
 	changeMapValues($event) {
-		console.log('Event.Value - ', $event.value)
 		this.currentListing = $event.value;
-		console.log('Current Location - ', this.currentListing);
 	}
 }

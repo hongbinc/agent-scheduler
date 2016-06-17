@@ -18,12 +18,27 @@ export class Listings {
 	}
 
 	showListingInMap(obj: ListingModel) {
+		var self = this;
 		console.log('Emitting - ', obj);
-		this.modelForMap.emit({
-			// value = obj;
-			value: {
-				lat: 40.779382,
-				lng: -73.967013
+		var geocoder = new window.google.maps.Geocoder();
+		geocoder.geocode({ 'address': obj.address }, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				var location = results[0].geometry.location;
+				console.log('Location - ', location);
+				self.modelForMap.emit({
+					value: {
+						lat: location.lat(),
+						lng: location.lng()
+					}
+					/* Dummy data- 
+						value: {
+							lat: 40.779382,
+							lng: -73.967013
+						}
+					*/
+				});
+			} else {
+				alert('Geocode was not successful for the following reason: ' + status);
 			}
 		});
 	}
