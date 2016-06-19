@@ -1,6 +1,36 @@
 body {
-	margin: 5%;
+    
 }
+
 #map-container {
-	height: 400px;
+    height: 100%;
+}
+.showbox::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    outline: 1px solid slategrey;
+}
+
+.showbox::-webkit-scrollbar {
+    width: 1em;
+}
+
+.showbox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.showbox {
+    position: absolute;
+    z-index: 100;
+    padding-top: 20px;
+    padding-left: 5px;
+    max-width: 520px;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.showListing {
+    background-color: #fff;
+}
+
+.showInputField {
+    
 }
