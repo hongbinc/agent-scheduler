@@ -23,8 +23,8 @@ export class MapComponent {
 			let vLng = this.model.lng || -74;
 			this.Map = new tGoogleMaps.Map(vDiv, {
 				center: { lat: vLat, lng: vLng },
-				zoom: 14,
-				scrollwheel: false
+                zoom: 14,
+                scrollwheel: true
 			});
 
 			// Add Markers Here 
@@ -34,12 +34,21 @@ export class MapComponent {
 				vGeocoder.geocode({ address: currentListing.address },
 					(tResults, tStatus) => {
 						if (tStatus === tGoogleMaps.GeocoderStatus.OK) {
-							var location = tResults[0].geometry.location;
-							new tGoogleMaps.Marker({
+                            var location = tResults[0].geometry.location;
+                            //console.log(tResults[0].formatted_address);
+                            var contentString = '<div id="content">' + tResults[0].formatted_address + '</div>';
+
+                            var infowindow = new tGoogleMaps.InfoWindow({
+                                content: contentString
+                            });
+                            var marker = new tGoogleMaps.Marker({
 								position: { lat: location.lat(), lng: location.lng() },
 								map: this.Map,
-								title: 'We can add data here...!'
-							});
+                                title: tResults[0].formatted_address
+                                });
+                            infowindow.open(this.Map, marker);
+
+                            ////////
 						}
 					});
 			}
