@@ -1,29 +1,13 @@
-# Angular 2 Seed Project
+# Agent Showing Schedule Helper 
+![](http://progressed.io/bar/50?title=In Progress)
 
-## Description
-This repository has the goal of making seeding an Angular 2 project easy. Currently it's in heavy development, as Angular 2 isn't released yet.
+## Project Overview:
+Developing a single page application that helps Buyer/Renter's Agent decide properties showing order depend on distance between each Listing.
 
-## Features
-dev/ folder holds TypeScript (Angular 2) code => compiled into app/ folder, bundled into bundle.js (incl. dependencies).
+## Project Approaches:
+- Allow user input multiple addresses 
+- Show all listing's address on map with map marker and infowindow
+- Make the first address input become the starting point(Agent's choice) 
+- Display a list of showing order start with the First address choose by agent
 
-assets/ folder holds other assets (e.g. SCSS code) => compiled into src/ folder.
 
-Bundling of TypeScript is managed via SystemJS Builder. Code compilation is managed via Gulp.
-
-## Usage
-Important: Typescript and npm has to be installed on your machine!
-
-1: Clone repo
-```
-git clone https://github.com/mschwarzmueller/angular2-seed.git
-```
-2: Install packages
-```
-npm install
-```
-3: Start server (includes auto refreshing) and gulp watcher
-```
-npm start
-```
-
-4: Visit localhost:3000 (default) if the tab hasn't opened automatically
