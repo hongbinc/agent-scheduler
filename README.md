@@ -1,4 +1,4 @@
-# Agent Showing Schedule Helper 
+# Agent's Showing Schedule Helper 
 ![](http://progressed.io/bar/50?title=In Progress)
 
 ## Project Overview:
